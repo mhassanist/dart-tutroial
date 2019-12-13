@@ -11,7 +11,6 @@ void main() {
   bool isChecked = false;
   isChecked = true;
 
-  print(x);
   print(y);
 
   print(x1);
@@ -19,13 +18,36 @@ void main() {
 
   print(name);
   print(isChecked);
-  
+
   print("Concatinated String is $x1 and also \n$y1");
-  
-  print("Concatinated String is ${x1+y1*x} and also \n$y1");
-  
+
+  print("Concatinated String is ${x1 + y1 * x} and also \n$y1");
+
   var xT = 34.51;
   print(xT);
   print(xT.runtimeType);
+
+  //for constants, just add the word const or final
+  const num j = 34;
+  final String jj = "JJ final";
   
+  //Final can accept runtime initialization. const obj = new ClassName();
+  //Other differences later.
+  
+  //final var k =34; 
+  //illegal; members can't be declared as var and final together
+
+  print("The constant variable j value is $j ");
+  
+  var xeed = 3;
+  //xeed = "Yea";
+
+   
+  dynamic yeed = 3;
+  print(yeed);
+  print(yeed.runtimeType);
+  
+  yeed = "New string type"; // This code is allowed
+  print(yeed);
+  print(yeed.runtimeType);
 }
